@@ -1,152 +1,251 @@
 # AI Investment Research Copilot
 
-> An AI-powered multi-agent investment research platform that combines financial analysis, technical indicators, market news, and Retrieval-Augmented Generation (RAG) to generate explainable investment research and decision-support recommendations.
+> An AI-powered investment research platform that combines Multi-Agent AI, Retrieval-Augmented Generation (RAG), and financial intelligence to generate explainable investment research reports.
 
 ---
 
-## Vision
+## Overview
 
-Enable investors and analysts to make informed investment decisions by transforming fragmented financial information into explainable, AI-assisted investment research.
+AI Investment Research Copilot is a product concept and reference architecture demonstrating how Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and specialized AI agents can streamline investment research.
+
+Instead of manually reviewing financial statements, earnings reports, market data, technical indicators, and news articles, users receive a structured, explainable research report generated through an orchestrated AI workflow.
+
+> **Note:** This platform is designed as a decision-support tool. It does **not** provide financial advice or execute trades.
 
 ---
 
-## Problem Statement
+## Business Problem
 
-Investment research requires analyzing information from multiple sources, including:
+Investment research often requires analyzing information from multiple sources:
 
-- Financial statements
-- Annual reports
-- Quarterly earnings
-- Market data
+- Annual & quarterly financial statements
+- Earnings call transcripts
 - Technical indicators
-- Company news
-- Industry trends
+- Market data
+- Business news
+- Company filings
 
-Manually consolidating this information is time-consuming, repetitive, and may lead to inconsistent investment analysis.
+This process is time-consuming, repetitive, and difficult to scale.
 
 ---
 
 ## Solution
 
-AI Investment Research Copilot is a multi-agent AI platform designed to automate investment research by integrating structured financial data, market information, technical indicators, and enterprise knowledge using Retrieval-Augmented Generation (RAG).
+The platform orchestrates multiple AI agents to:
 
-The platform generates explainable investment research reports, confidence scores, and risk assessments while keeping the final investment decision with the user.
+- Retrieve market and company data
+- Analyze financial statements
+- Interpret technical indicators
+- Summarize news and sentiment
+- Retrieve relevant documents using RAG
+- Generate an explainable investment research report
+- Assign a confidence score
+- Support human review before investment decisions
 
 ---
 
-## Target Users
+# Key Features
+
+- Multi-Agent AI Architecture
+- Retrieval-Augmented Generation (RAG)
+- Explainable AI Reports
+- Financial Statement Analysis
+- Technical Analysis
+- News & Sentiment Analysis
+- Workflow Orchestration
+- Confidence Scoring
+- Human-in-the-Loop Review
+- Modular & Scalable Design
+
+---
+
+# High-Level Architecture
+
+```text
+User
+   │
+   ▼
+Streamlit UI
+   │
+   ▼
+FastAPI Backend
+   │
+   ▼
+Workflow Orchestrator
+   │
+   ├── Market Data Agent
+   ├── Financial Analysis Agent
+   ├── Technical Analysis Agent
+   ├── News & Sentiment Agent
+   ├── Document Retrieval Agent (RAG)
+   ▼
+Investment Research Agent
+   ▼
+Report Generation Agent
+   ▼
+Investment Research Report
+```
+
+Detailed diagrams are available in the [`diagrams/`](diagrams/) folder.
+
+---
+
+# Technology Stack
+
+| Category | Technologies |
+|----------|--------------|
+| AI | OpenAI GPT |
+| RAG | OpenAI Embeddings, ChromaDB |
+| Backend | FastAPI |
+| Frontend | Streamlit |
+| APIs | REST APIs, Financial Data APIs |
+| AI Design | Multi-Agent Architecture |
+| Product | Product Requirements, Roadmaps, Risk Register |
+| Documentation | Markdown |
+
+---
+
+# Repository Structure
+
+```text
+ai-investment-research-copilot/
+│
+├── README.md
+│
+├── docs/
+├── diagrams/
+```
+
+---
+
+# Documentation
+
+| Document | Description |
+|----------|-------------|
+| 01_Market_Analysis | Market opportunity and industry analysis |
+| 02_Competitive_Analysis | Competitor landscape and differentiation |
+| 03_Product_Requirements_Document | Product vision, scope, and requirements |
+| 04_User_Personas | Target users and pain points |
+| 05_User_Journey | End-to-end user workflow |
+| 06_Product_Workflow | Product execution flow |
+| 07_AI_Agent_Specifications | Responsibilities of each AI agent |
+| 08_Workflow_Orchestrator | AI orchestration strategy |
+| 09_System_Architecture | System architecture overview |
+| 10_Data_Model | Core data entities and relationships |
+| 11_API_Specification | REST API definitions |
+| 12_AI_Guardrails | Responsible AI and governance |
+| 13_AI_Evaluation | AI quality and evaluation metrics |
+| 14_Non_Functional_Requirements | Performance, security, scalability |
+| 15_Risk_Register | Product and technical risks |
+| 16_MVP_Roadmap | Phased delivery roadmap |
+| 17_Future_Roadmap | Long-term product vision |
+
+---
+
+# AI Workflow
+
+```text
+User Request
+      │
+      ▼
+Workflow Orchestrator
+      │
+      ├── Market Data Agent
+      ├── Financial Analysis Agent
+      ├── Technical Analysis Agent
+      ├── News & Sentiment Agent
+      ├── Document Retrieval Agent (RAG)
+      ▼
+Investment Research Agent
+      ▼
+Report Generation Agent
+      ▼
+Final Investment Research Report
+```
+
+---
+
+# Design Principles
+
+- Explainable AI
+- Human-in-the-Loop Decision Support
+- Modular Architecture
+- Enterprise Scalability
+- Responsible AI
+- Security by Design
+- API-First Architecture
+- Extensibility
+
+---
+
+# Future Enhancements
+
+- Portfolio Management
+- Watchlists
+- ESG Analysis
+- Multi-Asset Support
+- Multi-LLM Orchestration
+- Voice Assistant
+- Mobile Application
+- Predictive Analytics
+- Enterprise Collaboration
+
+---
+
+# Skills Demonstrated
+
+## AI Product Management
+
+- Product Vision
+- Product Strategy
+- PRD Authoring
+- User Journey Mapping
+- MVP Planning
+- Roadmap Planning
+- Risk Management
+- AI Governance
+- Product Documentation
+
+## AI Solution Design
+
+- Multi-Agent AI
+- Retrieval-Augmented Generation (RAG)
+- LLM Integration
+- Workflow Orchestration
+- API Design
+- System Architecture
+- Data Modeling
+- Explainable AI
+- AI Evaluation Framework
+
+---
+
+# Target Users
 
 - Retail Investors
 - Financial Analysts
 - Portfolio Managers
 - Investment Advisors
-- Equity Research Teams
 
 ---
 
-## Core Capabilities
+# Project Status
 
-- Financial Statement Analysis
-- Technical Analysis
-- Market Data Analysis
-- News & Sentiment Analysis
-- Earnings Report Summarization
-- Risk Assessment
-- Explainable Investment Research
-- Confidence Scoring
-- Human Review Workflow
-- Investment Research Report Generation
+**Status:** Product Design & Architecture Complete
 
----
+Current focus:
 
-## MVP Scope
+- Product Strategy
+- AI Solution Design
+- Enterprise Documentation
+- Architecture Artifacts
 
-The initial version of the platform will support:
-
-- Search publicly listed companies
-- Retrieve market data
-- Analyze financial statements
-- Calculate technical indicators
-- Summarize financial news
-- Generate AI-powered investment research reports
-- Provide confidence scores and risk insights
-- Support human review before investment decisions
+Future implementation may include a working prototype using FastAPI, Streamlit, OpenAI GPT, ChromaDB, and financial market APIs.
 
 ---
 
-## Proposed Technology Stack
+# Author
 
-| Category | Technology |
-|----------|------------|
-| LLM | OpenAI GPT |
-| Embeddings | OpenAI Embeddings |
-| AI Architecture | Multi-Agent AI |
-| Knowledge Retrieval | RAG |
-| Vector Database | ChromaDB |
-| Backend | FastAPI |
-| Frontend | Streamlit |
-| Programming Language | Python |
-| Market Data | Yahoo Finance / Alpha Vantage |
+**Umesh Sawant**
 
----
-
-## Design Principle
-
-This platform is **not** an autonomous trading system.
-
-Its purpose is to assist users with investment research by providing transparent analysis, explainable recommendations, and comprehensive risk insights.
-
-The final investment decision always remains with the user.
-
----
-
-## Repository Structure
-
-```text
-ai-investment-research-copilot/
-
-├── README.md
-├── docs/
-├── diagrams/
-├── assets/
-├── LICENSE
-└── .gitignore
-```
-
----
-
-## Documentation Roadmap
-
-This repository will include comprehensive product management and system design documentation, including:
-
-- Market Analysis
-- Competitive Analysis
-- Product Requirements Document (PRD)
-- User Personas
-- User Journey
-- Product Workflow
-- AI Agent Specifications
-- Workflow Orchestrator
-- System Architecture
-- Data Model
-- API Specification
-- AI Guardrails
-- AI Evaluation
-- Non-Functional Requirements
-- Risk Register
-- MVP Roadmap
-- Future Product Roadmap
-
----
-
-## Project Status
-
-🚧 **Product Design Phase**
-
-This repository focuses on product strategy, AI system design, and technical architecture for an AI-powered investment research platform.
-
----
-
-## Author
-
-Designed as an AI Product Management portfolio project demonstrating product strategy, multi-agent AI architecture, Retrieval-Augmented Generation (RAG), workflow orchestration, and enterprise AI system design.
+AI Product Manager | Generative AI | Multi-Agent AI | RAG | Product Strategy | Solution Design
